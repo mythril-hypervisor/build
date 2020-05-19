@@ -2,8 +2,9 @@ FROM archlinux/base
 MAINTAINER Adam Schwalm <adamschwalm@gmail.com>
 
 RUN pacman -y --noconfirm -S rustup gcc make nasm python
+RUN useradd -m mythril
 
-USER root
+USER mythril
 RUN rustup set profile minimal
 RUN rustup toolchain install nightly-2020-05-14
 RUN rustup component add rust-src
