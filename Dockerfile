@@ -11,4 +11,9 @@ RUN rustup component add rust-src
 RUN rustup component add rustfmt
 RUN cargo install cargo-xbuild
 
+# These must still point to the right place, even
+# when running as a different user (like root)
+ENV RUSTUP_HOME /home/mythril/.rustup
+ENV CARGO_HOME /home/mythril/.cargo
+
 WORKDIR /src
