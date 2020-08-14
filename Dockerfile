@@ -15,4 +15,8 @@ RUN rustup component add rustfmt
 ENV RUSTUP_HOME /home/mythril/.rustup
 ENV CARGO_HOME /home/mythril/.cargo
 
+# The user might not be UID 1000, so allow anyone to write
+# to this user's home.
+RUN chmod 777 -R /home/mythril/
+
 WORKDIR /src
