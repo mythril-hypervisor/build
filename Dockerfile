@@ -1,7 +1,7 @@
 FROM archlinux/base@sha256:b51848238f91eb50f3962041b2a23b7a1e4d588c53a0ba8419d4e3b28d652e7f
 MAINTAINER Adam Schwalm <adamschwalm@gmail.com>
 
-RUN pacman -y --noconfirm -S base-devel libffi bc rustup nasm python grub libisoburn qemu
+RUN pacman -y --noconfirm -S base-devel libffi bc rustup nasm python grub libisoburn qemu git
 RUN useradd -m mythril
 
 USER mythril
