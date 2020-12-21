@@ -6,7 +6,7 @@ RUN useradd -m mythril
 
 USER mythril
 RUN rustup set profile minimal
-RUN rustup toolchain install nightly-2020-08-13
+RUN rustup toolchain install nightly-2020-11-16
 RUN rustup component add rust-src
 RUN rustup component add rustfmt
 
